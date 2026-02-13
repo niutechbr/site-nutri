@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giovanna Milkem — Nutricionista</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <script>
@@ -14,135 +13,158 @@
                 extend: {
                     colors: {
                         gio: {
-                            blue: '#83B0C4',   // O azul extraído da sua logo
-                            dark: '#5B7A8A',   // Uma variação mais escura para textos
-                            light: '#F5F9FB',  // Fundo azulado bem leve
-                            text: '#1d1d1f'    // Cinza escuro estilo Apple
+                            blue: '#83B0C4',
+                            dark: '#5B7A8A',
+                            light: '#F5F9FB',
+                            text: '#1d1d1f'
                         }
                     },
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    }
+                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
                 }
             }
         }
     </script>
 
     <style>
-        body { background-color: #ffffff; color: #1d1d1f; }
-        
-        /* Estilo Apple Store */
-        .swiper { padding: 40px 0 80px 0 !important; overflow: visible !important; }
-        
-        .apple-card {
-            background: #ffffff;
-            border-radius: 24px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .apple-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 20px 40px rgba(131, 176, 196, 0.15);
-        }
-
+        body { background-color: #ffffff; color: #1d1d1f; scroll-behavior: smooth; }
         .container-custom { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
         
-        .swiper-pagination-bullet-active { background: #83B0C4 !important; }
+        /* Estilização para o formulário */
+        input:focus, select:focus, textarea:focus {
+            outline: 2px solid #83B0C4;
+            border-color: transparent;
+        }
+        
+        .checkbox-custom:checked {
+            background-color: #83B0C4;
+            border-color: #83B0C4;
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <nav class="py-10 text-center">
-        <img src="assets/img/logo.png" alt="Giovanna Milkem Nutricionista" class="h-24 mx-auto md:h-32">
+    <nav class="pt-20 pb-16 bg-white border-b border-gray-50">
+        <div class="container-custom flex justify-center">
+            <img src="assets/img/logo.png" alt="Giovanna Milkem" class="h-40 md:h-56 w-auto">
+        </div>
     </nav>
 
-    <header class="pt-8 pb-12 text-center">
+    <header class="py-24 text-center bg-white">
         <div class="container-custom">
-            <h1 class="text-4xl md:text-6xl font-bold text-gio-text mb-6 tracking-tight">
-                Cuidar da sua alimentação <br><span class="text-gio-blue font-medium">pode ser simples.</span>
+            <h1 class="text-5xl md:text-7xl font-bold text-gio-text mb-8 tracking-tighter">
+                Sua jornada para uma <br>
+                <span class="text-gio-blue">vida mais leve.</span>
             </h1>
-            <p class="text-lg md:text-xl text-gio-dark/80 max-w-2xl mx-auto leading-relaxed">
-                Guias práticos desenvolvidos para trazer leveza e saúde para a rotina da sua família.
+            <p class="text-xl md:text-2xl text-gio-dark/60 max-w-2xl mx-auto font-medium">
+                Conheça os guias exclusivos desenvolvidos para transformar sua relação com a comida.
             </p>
         </div>
     </header>
 
-    <section class="py-12 overflow-hidden bg-gio-light">
-        <div class="container-custom mb-8">
-            <h2 class="text-3xl font-bold text-gio-text">Os Guias. <span class="text-gio-blue/60">Tudo o que você precisa.</span></h2>
-        </div>
-
-        <div class="pl-[max(24px,calc((100%-1100px)/2))]">
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    
-                    <div class="swiper-slide !w-[300px] md:!w-[380px]">
-                        <div class="apple-card p-6 flex flex-col h-full shadow-sm">
-                            <div class="rounded-2xl overflow-hidden mb-6 bg-white">
-                                <img src="assets/img/capa-receitas.jpg" alt="E-book 1" class="w-full h-full object-cover aspect-[4/5]">
-                            </div>
-                            <h3 class="text-2xl font-bold text-gio-text mb-4">Receita Prática</h3>
-                            <p class="text-gio-dark/70 text-sm mb-8 flex-grow">Otimize seu tempo na cozinha com pratos nutritivos e saborosos.</p>
-                            <a href="https://wa.me/5534997775083" class="w-full text-center bg-gio-blue text-white py-3 rounded-full font-bold hover:bg-gio-dark transition-all">Saber mais</a>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide !w-[300px] md:!w-[380px]">
-                        <div class="apple-card p-6 flex flex-col h-full shadow-sm">
-                            <div class="rounded-2xl overflow-hidden mb-6 bg-white">
-                                <img src="assets/img/capa-lancheira.jpg" alt="E-book 2" class="w-full h-full object-cover aspect-[4/5]">
-                            </div>
-                            <h3 class="text-2xl font-bold text-gio-text mb-4">Lancheira Escolar</h3>
-                            <p class="text-gio-dark/70 text-sm mb-8 flex-grow">Variedade e nutrição para a escola, sem complicações para os pais.</p>
-                            <a href="https://wa.me/5534997775083" class="w-full text-center bg-gio-blue text-white py-3 rounded-full font-bold hover:bg-gio-dark transition-all">Saber mais</a>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide !w-[300px] md:!w-[380px]">
-                        <div class="apple-card p-6 flex flex-col h-full shadow-sm">
-                            <div class="rounded-2xl overflow-hidden mb-6 bg-white">
-                                <img src="assets/img/capa-supermercado.jpg" alt="E-book 3" class="w-full h-full object-cover aspect-[4/5]">
-                            </div>
-                            <h3 class="text-2xl font-bold text-gio-text mb-4">Guia de Mercado</h3>
-                            <p class="text-gio-dark/70 text-sm mb-8 flex-grow">Aprenda a escolher os melhores produtos e economizar nas compras.</p>
-                            <a href="https://wa.me/5534997775083" class="w-full text-center bg-gio-blue text-white py-3 rounded-full font-bold hover:bg-gio-dark transition-all">Saber mais</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="swiper-pagination !static mt-10"></div>
+    <section class="py-20 bg-gio-light">
+        <div class="container-custom grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <img src="assets/img/capa-receitas.jpg" alt="Receita Prática" class="rounded-[32px] shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="order-1 md:order-2">
+                <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Volume 01</span>
+                <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Receita Prática: <br>Sabor em minutos</h2>
+                <p class="text-lg text-gio-dark/80 leading-relaxed mb-6">
+                    Reuni minhas melhores estratégias para criar refeições completas, nutritivas e, acima de tudo, rápidas. Ideal para quem tem uma rotina agitada.
+                </p>
             </div>
         </div>
     </section>
 
-    <div class="container-custom py-24">
-        <div class="bg-gio-blue rounded-[40px] p-12 text-center text-white">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">Garanta o Combo Completo</h2>
-            <p class="text-lg opacity-90 mb-10 max-w-xl mx-auto">Os três guias com uma condição especial para transformar sua saúde hoje.</p>
-            <a href="https://wa.me/5534997775083" class="inline-block bg-white text-gio-blue px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-transform">
-                Quero o desconto especial
-            </a>
+    <section class="py-20 bg-white">
+        <div class="container-custom grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Volume 02</span>
+                <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Lancheira Escolar: <br>Saúde na mochila</h2>
+                <p class="text-lg text-gio-dark/80 leading-relaxed mb-6">
+                    Aprenda a montar lancheiras variadas, coloridas e equilibradas que as crianças realmente gostam de comer, garantindo energia para o dia todo.
+                </p>
+            </div>
+            <div>
+                <img src="assets/img/capa-lancheira.jpg" alt="Lancheira Escolar" class="rounded-[32px] shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-500">
+            </div>
         </div>
-    </div>
+    </section>
 
-    <footer class="bg-white py-20 border-t border-gray-100">
+    <section class="py-20 bg-gio-light">
+        <div class="container-custom grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <img src="assets/img/capa-supermercado.jpg" alt="Guia de Mercado" class="rounded-[32px] shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="order-1 md:order-2">
+                <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Volume 03</span>
+                <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Guia de Supermercado: <br>Escolhas Inteligentes</h2>
+                <p class="text-lg text-gio-dark/80 leading-relaxed mb-6">
+                    Ensino você a identificar pegadinhas da indústria, decifrar rótulos e fazer escolhas conscientes que valem a pena para sua família.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="container-custom max-w-3xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gio-text mb-4">Tenho interesse</h2>
+                <p class="text-gio-dark/60 font-medium">Preencha os dados abaixo e selecione os guias que deseja receber informações.</p>
+            </div>
+
+            <form class="bg-gio-light p-8 md:p-12 rounded-[40px] shadow-sm border border-gio-blue/10">
+                <div class="grid grid-cols-1 gap-6">
+                    
+                    <div>
+                        <label class="block text-sm font-bold text-gio-text mb-2 ml-1">Nome Completo</label>
+                        <input type="text" placeholder="Como gostaria de ser chamado(a)?" class="w-full bg-white border border-gray-200 rounded-2xl py-4 px-6 text-gio-text transition-all">
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-gio-text mb-2 ml-1">E-mail</label>
+                            <input type="email" placeholder="seu@email.com" class="w-full bg-white border border-gray-200 rounded-2xl py-4 px-6 text-gio-text transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gio-text mb-2 ml-1">WhatsApp</label>
+                            <input type="tel" placeholder="(00) 00000-0000" class="w-full bg-white border border-gray-200 rounded-2xl py-4 px-6 text-gio-text transition-all">
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="block text-sm font-bold text-gio-text mb-4 ml-1">Quais guias você tem interesse?</label>
+                        <div class="space-y-3">
+                            <label class="flex items-center p-4 bg-white rounded-2xl border border-gray-100 cursor-pointer hover:border-gio-blue transition-all">
+                                <input type="checkbox" class="checkbox-custom w-5 h-5 rounded border-gray-300 text-gio-blue focus:ring-gio-blue">
+                                <span class="ml-4 text-gio-text font-medium">Receita Prática</span>
+                            </label>
+                            <label class="flex items-center p-4 bg-white rounded-2xl border border-gray-100 cursor-pointer hover:border-gio-blue transition-all">
+                                <input type="checkbox" class="checkbox-custom w-5 h-5 rounded border-gray-300 text-gio-blue focus:ring-gio-blue">
+                                <span class="ml-4 text-gio-text font-medium">Lancheira Escolar</span>
+                            </label>
+                            <label class="flex items-center p-4 bg-white rounded-2xl border border-gray-100 cursor-pointer hover:border-gio-blue transition-all">
+                                <input type="checkbox" class="checkbox-custom w-5 h-5 rounded border-gray-300 text-gio-blue focus:ring-gio-blue">
+                                <span class="ml-4 text-gio-text font-medium">Guia de Supermercado</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="mt-6 w-full bg-gio-blue text-white font-bold py-5 rounded-3xl text-lg hover:bg-gio-dark transition-all transform hover:scale-[1.01] shadow-lg shadow-gio-blue/20">
+                        Enviar meu interesse
+                    </button>
+                    
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gio-light py-20">
         <div class="container-custom text-center">
-            <img src="assets/img/logo.png" alt="Logo" class="h-16 mx-auto mb-8 opacity-50">
-            <p class="text-gio-dark font-medium mb-2">Giovanna Milkem — Nutricionista</p>
-            <p class="text-sm text-gray-400">Uberlândia, MG | (34) 99777-5083</p>
+            <img src="assets/img/logo.png" alt="Logo" class="h-20 mx-auto mb-8 opacity-40">
+            <p class="text-sm text-gray-400 uppercase tracking-widest font-bold">© 2026 Giovanna Milkem</p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: "auto",
-            spaceBetween: 25,
-            freeMode: true,
-            autoplay: { delay: 5000, pauseOnMouseEnter: true },
-            pagination: { el: ".swiper-pagination", clickable: true },
-        });
-    </script>
 </body>
 </html>
