@@ -15,11 +15,31 @@
         body { font-family: 'Inter', sans-serif; }
         html { scroll-behavior: smooth; }
         
-        /* Customização das bolinhas do carrossel */
-        .swiper-pagination-bullet-active {
-            background: #16a34a !important; /* verde-600 */
+        /* --- Estilização do Carrossel com Destaque --- */
+        .swiper {
+            padding-bottom: 60px !important;
+            padding-top: 20px !important;
         }
-        .swiper { padding-bottom: 50px !important; }
+
+        .swiper-slide {
+            transition: all 0.5s ease;
+            opacity: 0.5;
+            transform: scale(0.9);
+        }
+
+        /* Slide que está no centro/foco */
+        .swiper-slide-active {
+            opacity: 1;
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        /* Customização dos pontos de navegação */
+        .swiper-pagination-bullet-active {
+            background: #16a34a !important;
+            width: 25px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
@@ -29,88 +49,86 @@
             <span class="inline-block bg-green-100 text-green-700 text-sm font-bold px-4 py-2 rounded-full mb-6 shadow-sm border border-green-200">
                 🥗 Nutrição Infantil & Familiar
             </span>
-            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tight">
-                Transforme a alimentação da sua casa <br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-500">sem estresse e com economia</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+                Alimentação saudável <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-500 text-6xl">sem complicações</span>
             </h1>
             <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Chega de dúvidas no supermercado ou na lancheira. Leve os <strong>3 Guias Práticos</strong> da Nutricionista Gamilkem e simplifique sua rotina hoje mesmo.
+                Do supermercado à lancheira: guias práticos criados pela <strong>Nutri Gamilkem</strong> para facilitar a rotina das mães.
             </p>
             
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
                 <a href="#ebooks" class="w-full sm:w-auto bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-xl transition duration-300 shadow-lg hover:shadow-green-500/30 transform hover:-translate-y-1">
                     Ver os E-books
                 </a>
-                <a href="https://wa.me/5534997775083" target="_blank" class="w-full sm:w-auto bg-white border-2 border-green-100 text-green-700 font-bold py-4 px-10 rounded-xl hover:border-green-600 hover:text-green-800 transition duration-300">
+                <a href="https://wa.me/5534997775083" target="_blank" class="w-full sm:w-auto bg-white border-2 border-green-100 text-green-700 font-bold py-4 px-10 rounded-xl hover:border-green-600 transition duration-300">
                     Falar com a Nutri
                 </a>
             </div>
         </div>
         
         <div class="absolute top-0 left-0 w-64 h-64 bg-green-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
-        <div class="absolute top-0 right-0 w-64 h-64 bg-emerald-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
     </header>
 
     <section id="ebooks" class="py-24 px-6 bg-white overflow-hidden">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Escolha seu Guia Prático</h2>
-                <div class="h-1.5 w-24 bg-green-500 mx-auto rounded-full"></div>
-            </div>
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Escolha seu Guia Prático</h2>
+            <div class="h-1.5 w-24 bg-green-500 mx-auto rounded-full"></div>
+            <p class="mt-4 text-gray-500 italic">O carrossel pausa ao passar o mouse</p>
+        </div>
 
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl transition-all flex flex-col h-full mx-2">
-                            <div class="relative mb-6 rounded-xl overflow-hidden bg-gray-100 aspect-[3/4]">
-                                <img src="assets/img/capa-receitas.jpg" alt="E-book Receita Prática" class="object-cover w-full h-full transform hover:scale-105 transition duration-500">
-                            </div>
-                            <h3 class="text-2xl font-bold mb-3 text-gray-900">Receita Prática</h3>
-                            <p class="text-gray-600 mb-6 flex-grow text-sm">Pratos nutritivos que ficam prontos em poucos minutos. Ideal para mães modernas.</p>
-                            <a href="https://wa.me/5534997775083?text=Olá! Gostaria de adquirir o E-book: Receita Prática" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-                                Adquirir agora
-                            </a>
+        <div class="swiper mySwiper px-4">
+            <div class="swiper-wrapper">
+                
+                <div class="swiper-slide">
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg flex flex-col h-full">
+                        <div class="relative mb-6 rounded-xl overflow-hidden bg-gray-100 aspect-[3/4]">
+                            <img src="assets/img/capa-receitas.jpg" alt="Receita Prática" class="object-cover w-full h-full">
                         </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Receita Prática</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Pratos nutritivos que ficam prontos em poucos minutos. Ideal para o seu dia a dia.</p>
+                        <a href="https://wa.me/5534997775083?text=Olá! Quero o E-book: Receita Prática" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Adquirir agora
+                        </a>
                     </div>
-
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl transition-all flex flex-col h-full mx-2">
-                            <div class="relative mb-6 rounded-xl overflow-hidden bg-gray-100 aspect-[3/4]">
-                                <img src="assets/img/capa-lancheira.jpg" alt="E-book Lancheira Escolar" class="object-cover w-full h-full transform hover:scale-105 transition duration-500">
-                            </div>
-                            <h3 class="text-2xl font-bold mb-3 text-gray-900">Lancheira Escolar</h3>
-                            <p class="text-gray-600 mb-6 flex-grow text-sm">Acabe com a rejeição. Aprenda a montar lancheiras saudáveis e coloridas.</p>
-                            <a href="https://wa.me/5534997775083?text=Olá! Gostaria de adquirir o E-book: Lancheira Escolar" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-                                Adquirir agora
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide h-auto">
-                        <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl transition-all flex flex-col h-full mx-2">
-                            <div class="relative mb-6 rounded-xl overflow-hidden bg-gray-100 aspect-[3/4]">
-                                <img src="assets/img/capa-supermercado.jpg" alt="Guia de Supermercado" class="object-cover w-full h-full transform hover:scale-105 transition duration-500">
-                            </div>
-                            <h3 class="text-2xl font-bold mb-3 text-gray-900">Guia de Supermercado</h3>
-                            <p class="text-gray-600 mb-6 flex-grow text-sm">Saiba ler rótulos e evite pegadinhas da indústria nas suas compras.</p>
-                            <a href="https://wa.me/5534997775083?text=Olá! Gostaria de adquirir o E-book: Guia de Supermercado" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-                                Adquirir agora
-                            </a>
-                        </div>
-                    </div>
-
                 </div>
-                <div class="swiper-pagination"></div>
+
+                <div class="swiper-slide">
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg flex flex-col h-full">
+                        <div class="relative mb-6 rounded-xl overflow-hidden bg-gray-100 aspect-[3/4]">
+                            <img src="assets/img/capa-lancheira.jpg" alt="Lancheira Escolar" class="object-cover w-full h-full">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Lancheira Escolar</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Monte lancheiras saudáveis e atrativas que seus filhos vão amar de verdade.</p>
+                        <a href="https://wa.me/5534997775083?text=Olá! Quero o E-book: Lancheira Escolar" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Adquirir agora
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg flex flex-col h-full">
+                        <div class="relative mb-6 rounded-xl overflow-hidden bg-gray-100 aspect-[3/4]">
+                            <img src="assets/img/capa-supermercado.jpg" alt="Guia de Supermercado" class="object-cover w-full h-full">
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Guia de Supermercado</h3>
+                        <p class="text-gray-600 mb-6 flex-grow text-sm">Aprenda a ler rótulos e fazer escolhas conscientes para a saúde da sua família.</p>
+                        <a href="https://wa.me/5534997775083?text=Olá! Quero o E-book: Guia de Supermercado" target="_blank" class="block text-center bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Adquirir agora
+                        </a>
+                    </div>
+                </div>
+
             </div>
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
     <section id="oferta" class="py-16 px-6 bg-green-900 text-white">
         <div class="max-w-4xl mx-auto text-center border-2 border-green-500 rounded-3xl p-10 bg-green-800/50 shadow-2xl">
-            <h2 class="text-3xl font-bold mb-4">🎁 Oferta Especial: Combo Completo</h2>
-            <p class="text-xl mb-8 opacity-90 text-green-100">Leve os 3 E-books com um desconto exclusivo e transforme a saúde da sua família hoje!</p>
-            <a href="https://wa.me/5534997775083?text=Olá Nutri! Quero garantir o COMBO ESPECIAL com os 3 E-books." target="_blank" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-green-900 font-extrabold py-5 px-12 rounded-full text-xl transition transform hover:scale-105 shadow-xl">
+            <h2 class="text-3xl font-bold mb-4">🎁 Combo Especial</h2>
+            <p class="text-xl mb-8 opacity-90">Leve os 3 E-books por um valor reduzido!</p>
+            <a href="https://wa.me/5534997775083?text=Olá Nutri! Quero garantir o COMBO com os 3 E-books." target="_blank" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-green-900 font-extrabold py-5 px-12 rounded-full text-xl transition transform hover:scale-105 shadow-xl">
                 QUERO O COMBO COMPLETO ➔
             </a>
         </div>
@@ -118,19 +136,16 @@
 
     <footer class="bg-gray-900 text-white py-16 px-6">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Ficou com alguma dúvida?</h2>
-            <p class="mb-10 text-gray-400 text-lg">Entre em contato diretamente com a Nutri Gamilkem</p>
-            
-            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
-                <a href="https://wa.me/5534997775083" target="_blank" class="flex items-center gap-3 bg-green-600 hover:bg-green-700 px-6 py-4 rounded-lg font-bold transition">
+            <h2 class="text-3xl font-bold mb-8">Ficou com alguma dúvida?</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
+                <a href="https://wa.me/5534997775083" target="_blank" class="flex items-center gap-3 text-xl hover:text-green-400 transition">
                     <span>📞 (34) 99777-5083</span>
                 </a>
-                <a href="mailto:nutrigimilkem@gmail.com" class="flex items-center gap-3 bg-gray-800 hover:bg-gray-700 px-6 py-4 rounded-lg transition border border-gray-700">
+                <a href="mailto:nutrigimilkem@gmail.com" class="flex items-center gap-3 text-xl hover:text-green-400 transition">
                     <span>✉️ nutrigimilkem@gmail.com</span>
                 </a>
             </div>
-            
-            <div class="pt-8 border-t border-gray-800 text-sm text-gray-500">
+            <div class="pt-8 border-t border-gray-800 text-sm opacity-50">
                 &copy; 2024 Nutricionista Gamilkem. Todos os direitos reservados.
             </div>
         </div>
@@ -140,18 +155,21 @@
 
     <script>
         var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
+            slidesPerView: 1.1,         // Mostra um pouco do próximo slide
+            centeredSlides: true,      // Centraliza o slide ativo
+            spaceBetween: 30,          // Espaço entre os slides
+            loop: true,                // Loop infinito
             autoplay: {
-                delay: 4000,
+                delay: 5000,           // 5 segundos entre cada troca
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true, // Pausa o carrossel quando o mouse está em cima
             },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
             breakpoints: {
+                // Configurações para telas maiores
                 640: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
             },
