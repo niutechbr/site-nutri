@@ -28,17 +28,14 @@
     <style>
         body { background-color: #ffffff; color: #1d1d1f; scroll-behavior: smooth; }
         .container-custom { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+        input:focus { outline: 2px solid #83B0C4; border-color: transparent; }
+        .checkbox-custom:checked + span { color: #83B0C4; font-weight: 700; }
         
-        /* Estilização para o formulário */
-        input:focus, select:focus, textarea:focus {
-            outline: 2px solid #83B0C4;
-            border-color: transparent;
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        
-        .checkbox-custom:checked {
-            background-color: #83B0C4;
-            border-color: #83B0C4;
-        }
+        .animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
     </style>
 </head>
 <body class="antialiased">
@@ -55,116 +52,168 @@
                 Sua jornada para uma <br>
                 <span class="text-gio-blue">vida mais leve.</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gio-dark/60 max-w-2xl mx-auto font-medium">
-                Conheça os guias exclusivos desenvolvidos para transformar sua relação com a comida.
+            <p class="text-xl md:text-2xl text-gio-dark/60 max-w-2xl mx-auto font-medium leading-relaxed">
+                Conheça os guias exclusivos desenvolvidos para transformar sua relação com a comida e simplificar sua rotina.
             </p>
         </div>
     </header>
 
-    <section class="py-20 bg-gio-light">
+    <section class="py-24 bg-gio-light">
         <div class="container-custom grid md:grid-cols-2 gap-16 items-center">
             <div class="order-2 md:order-1">
-                <img src="assets/img/capa-receitas.jpg" alt="Receita Prática" class="rounded-[32px] shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-500">
+                <img src="assets/img/capa-receitas.jpg" alt="Receita Prática" class="rounded-[40px] shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-500">
             </div>
             <div class="order-1 md:order-2">
                 <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Volume 01</span>
                 <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Receita Prática: <br>Sabor em minutos</h2>
                 <p class="text-lg text-gio-dark/80 leading-relaxed mb-6">
-                    Reuni minhas melhores estratégias para criar refeições completas, nutritivas e, acima de tudo, rápidas. Ideal para quem tem uma rotina agitada.
+                    Muitas pessoas acreditam que comer bem exige horas na cozinha. Este guia prova o contrário. Reuni minhas melhores estratégias para criar refeições completas, nutritivas e, acima de tudo, rápidas.
                 </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="container-custom grid md:grid-cols-2 gap-16 items-center">
-            <div>
-                <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Volume 02</span>
-                <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Lancheira Escolar: <br>Saúde na mochila</h2>
-                <p class="text-lg text-gio-dark/80 leading-relaxed mb-6">
-                    Aprenda a montar lancheiras variadas, coloridas e equilibradas que as crianças realmente gostam de comer, garantindo energia para o dia todo.
-                </p>
-            </div>
-            <div>
-                <img src="assets/img/capa-lancheira.jpg" alt="Lancheira Escolar" class="rounded-[32px] shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-500">
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-gio-light">
-        <div class="container-custom grid md:grid-cols-2 gap-16 items-center">
-            <div class="order-2 md:order-1">
-                <img src="assets/img/capa-supermercado.jpg" alt="Guia de Mercado" class="rounded-[32px] shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-500">
-            </div>
-            <div class="order-1 md:order-2">
-                <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Volume 03</span>
-                <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Guia de Supermercado: <br>Escolhas Inteligentes</h2>
-                <p class="text-lg text-gio-dark/80 leading-relaxed mb-6">
-                    Ensino você a identificar pegadinhas da indústria, decifrar rótulos e fazer escolhas conscientes que valem a pena para sua família.
+                <p class="text-lg text-gio-dark/80 leading-relaxed">
+                    Ideal para quem tem uma rotina agitada, mas não abre mão de nutrir o corpo com comida de verdade.
                 </p>
             </div>
         </div>
     </section>
 
     <section class="py-24 bg-white">
-        <div class="container-custom max-w-3xl">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gio-text mb-4">Tenho interesse</h2>
-                <p class="text-gio-dark/60 font-medium">Preencha os dados abaixo e selecione os guias que deseja receber informações.</p>
+        <div class="container-custom grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Volume 02</span>
+                <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Lancheira Escolar: <br>Saúde na mochila</h2>
+                <p class="text-lg text-gio-dark/80 leading-relaxed mb-6">
+                    A alimentação infantil é um dos maiores desafios dos pais modernos. Neste guia, eu te ajudo a montar lancheiras variadas, coloridas e equilibradas que as crianças realmente gostam de comer.
+                </p>
+                <p class="text-lg text-gio-dark/80 leading-relaxed">
+                    Aprenda combinações que garantem energia para os estudos e crescimento saudável, sem depender de ultraprocessados.
+                </p>
             </div>
-
-            <form class="bg-gio-light p-8 md:p-12 rounded-[40px] shadow-sm border border-gio-blue/10">
-                <div class="grid grid-cols-1 gap-6">
-                    
-                    <div>
-                        <label class="block text-sm font-bold text-gio-text mb-2 ml-1">Nome Completo</label>
-                        <input type="text" placeholder="Como gostaria de ser chamado(a)?" class="w-full bg-white border border-gray-200 rounded-2xl py-4 px-6 text-gio-text transition-all">
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-bold text-gio-text mb-2 ml-1">E-mail</label>
-                            <input type="email" placeholder="seu@email.com" class="w-full bg-white border border-gray-200 rounded-2xl py-4 px-6 text-gio-text transition-all">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-bold text-gio-text mb-2 ml-1">WhatsApp</label>
-                            <input type="tel" placeholder="(00) 00000-0000" class="w-full bg-white border border-gray-200 rounded-2xl py-4 px-6 text-gio-text transition-all">
-                        </div>
-                    </div>
-
-                    <div class="mt-4">
-                        <label class="block text-sm font-bold text-gio-text mb-4 ml-1">Quais guias você tem interesse?</label>
-                        <div class="space-y-3">
-                            <label class="flex items-center p-4 bg-white rounded-2xl border border-gray-100 cursor-pointer hover:border-gio-blue transition-all">
-                                <input type="checkbox" class="checkbox-custom w-5 h-5 rounded border-gray-300 text-gio-blue focus:ring-gio-blue">
-                                <span class="ml-4 text-gio-text font-medium">Receita Prática</span>
-                            </label>
-                            <label class="flex items-center p-4 bg-white rounded-2xl border border-gray-100 cursor-pointer hover:border-gio-blue transition-all">
-                                <input type="checkbox" class="checkbox-custom w-5 h-5 rounded border-gray-300 text-gio-blue focus:ring-gio-blue">
-                                <span class="ml-4 text-gio-text font-medium">Lancheira Escolar</span>
-                            </label>
-                            <label class="flex items-center p-4 bg-white rounded-2xl border border-gray-100 cursor-pointer hover:border-gio-blue transition-all">
-                                <input type="checkbox" class="checkbox-custom w-5 h-5 rounded border-gray-300 text-gio-blue focus:ring-gio-blue">
-                                <span class="ml-4 text-gio-text font-medium">Guia de Supermercado</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="mt-6 w-full bg-gio-blue text-white font-bold py-5 rounded-3xl text-lg hover:bg-gio-dark transition-all transform hover:scale-[1.01] shadow-lg shadow-gio-blue/20">
-                        Enviar meu interesse
-                    </button>
-                    
-                </div>
-            </form>
+            <div>
+                <img src="assets/img/capa-lancheira.jpg" alt="Lancheira Escolar" class="rounded-[40px] shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-500">
+            </div>
         </div>
     </section>
 
-    <footer class="bg-gio-light py-20">
-        <div class="container-custom text-center">
-            <img src="assets/img/logo.png" alt="Logo" class="h-20 mx-auto mb-8 opacity-40">
-            <p class="text-sm text-gray-400 uppercase tracking-widest font-bold">© 2026 Giovanna Milkem</p>
+    <section class="py-24 bg-gio-light">
+        <div class="container-custom grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <img src="assets/img/capa-supermercado.jpg" alt="Guia de Mercado" class="rounded-[40px] shadow-2xl w-full max-w-md mx-auto transform hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="order-1 md:order-2">
+                <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Volume 03</span>
+                <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Guia de Supermercado: <br>Escolhas Inteligentes</h2>
+                <p class="text-lg text-gio-dark/80 leading-relaxed mb-6">
+                    A saúde começa no carrinho de compras. Decifrar rótulos pode parecer difícil, mas com as ferramentas certas, você se torna um consumidor consciente.
+                </p>
+                <p class="text-lg text-gio-dark/80 leading-relaxed">
+                    Ensino você a identificar pegadinhas da indústria, escolher os melhores ingredientes e economizar fazendo escolhas que valem a pena.
+                </p>
+            </div>
         </div>
+    </section>
+
+    <section class="py-32 bg-white" id="contato">
+        <div class="container-custom max-w-3xl">
+            
+            <div id="success-msg" class="hidden text-center bg-gio-light p-12 rounded-[40px] border border-gio-blue/20 animate-fade-in">
+                <div class="text-6xl mb-6">✨</div>
+                <h2 class="text-3xl font-bold text-gio-text mb-4">Obrigada pelo interesse!</h2>
+                <p class="text-gio-dark/70 mb-8">Sua mensagem foi preparada e você está sendo redirecionado para o WhatsApp da Giovanna.</p>
+                <button onclick="window.location.reload()" class="bg-gio-blue text-white px-8 py-3 rounded-full font-bold hover:bg-gio-dark transition-all">
+                    Fazer novo cadastro
+                </button>
+            </div>
+
+            <div id="form-container">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-gio-text mb-4">Tenho interesse</h2>
+                    <p class="text-gio-dark/60 font-medium">Preencha os dados abaixo e selecione os guias que deseja.</p>
+                </div>
+
+                <form id="interest-form" class="bg-gio-light p-8 md:p-12 rounded-[40px] shadow-sm border border-gio-blue/10">
+                    <div class="grid grid-cols-1 gap-6">
+                        
+                        <div>
+                            <label class="block text-sm font-bold text-gio-text mb-2 ml-1">Nome Completo</label>
+                            <input type="text" id="nome" required placeholder="Como gostaria de ser chamado(a)?" class="w-full bg-white border border-gray-200 rounded-2xl py-4 px-6 text-gio-text transition-all">
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-bold text-gio-text mb-2 ml-1">E-mail</label>
+                                <input type="email" id="email" required placeholder="seu@email.com" class="w-full bg-white border border-gray-200 rounded-2xl py-4 px-6 text-gio-text transition-all">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gio-text mb-2 ml-1">WhatsApp</label>
+                                <input type="tel" id="tel" required placeholder="(00) 00000-0000" class="w-full bg-white border border-gray-200 rounded-2xl py-4 px-6 text-gio-text transition-all">
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <label class="block text-sm font-bold text-gio-text mb-4 ml-1">Quais guias você tem interesse?</label>
+                            <div class="space-y-3">
+                                <label class="flex items-center p-4 bg-white rounded-2xl border border-gray-100 cursor-pointer hover:border-gio-blue transition-all group">
+                                    <input type="checkbox" value="Receita Prática" class="ebook-option w-5 h-5 rounded border-gray-300 text-gio-blue">
+                                    <span class="ml-4 text-gio-text font-medium group-hover:text-gio-blue transition-colors">Receita Prática</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-2xl border border-gray-100 cursor-pointer hover:border-gio-blue transition-all group">
+                                    <input type="checkbox" value="Lancheira Escolar" class="ebook-option w-5 h-5 rounded border-gray-300 text-gio-blue">
+                                    <span class="ml-4 text-gio-text font-medium group-hover:text-gio-blue transition-colors">Lancheira Escolar</span>
+                                </label>
+                                <label class="flex items-center p-4 bg-white rounded-2xl border border-gray-100 cursor-pointer hover:border-gio-blue transition-all group">
+                                    <input type="checkbox" value="Guia de Supermercado" class="ebook-option w-5 h-5 rounded border-gray-300 text-gio-blue">
+                                    <span class="ml-4 text-gio-text font-medium group-hover:text-gio-blue transition-colors">Guia de Supermercado</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="mt-6 w-full bg-gio-blue text-white font-bold py-5 rounded-3xl text-lg hover:bg-gio-dark transition-all transform hover:scale-[1.01] shadow-lg shadow-gio-blue/20">
+                            Enviar meu interesse
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-20 border-t border-gray-100 text-center">
+        <img src="assets/img/logo.png" alt="Logo" class="h-24 mx-auto mb-8 opacity-40">
+        <p class="text-sm text-gray-400 font-bold tracking-widest uppercase">© 2026 Giovanna Milkem — Nutricionista</p>
     </footer>
+
+    <script>
+        document.getElementById('interest-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById('nome').value;
+            const checkboxes = document.querySelectorAll('.ebook-option:checked');
+            let selecionados = [];
+            
+            checkboxes.forEach((cb) => { selecionados.push(cb.value); });
+
+            if (selecionados.length === 0) {
+                alert("Por favor, selecione pelo menos um guia de seu interesse.");
+                return;
+            }
+
+            // Montagem da mensagem personalizada
+            const listaEbooks = selecionados.join(", ");
+            const mensagem = `Olá, meu nome é ${nome}. Tenho interesse em adquirir o(s) E-book(s): ${listaEbooks}.`;
+            const encodedMsg = encodeURIComponent(mensagem);
+            
+            // Link do WhatsApp da Giovanna
+            const whatsappUrl = `https://wa.me/5534997775083?text=${encodedMsg}`;
+
+            // Troca visual para o Agradecimento
+            document.getElementById('form-container').classList.add('hidden');
+            document.getElementById('success-msg').classList.remove('hidden');
+
+            // Redirecionamento após o delay para o cliente ver o agradecimento
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+            }, 2000);
+        });
+    </script>
 
 </body>
 </html>
