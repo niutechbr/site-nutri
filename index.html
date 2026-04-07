@@ -4,6 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giovanna Milkem — Nutricionista</title>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '798581929982774');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=798581929982774&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
@@ -120,12 +138,18 @@
 
     <section class="py-24 bg-white">
         <div class="container-custom grid md:grid-cols-2 gap-16 items-center">
+            <div class="md:hidden order-1">
+                <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Receitinhas Express</span>
+                <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Receita Prática: <br>Sabor em minutos</h2>
+            </div>
             <div class="order-2 md:order-1">
                 <img src="assets/img/capa-receitas.jpg" alt="Receita Prática" class="rounded-[40px] shadow-2xl w-full max-w-md mx-auto transform hover:rotate-2 transition-all duration-500">
             </div>
-            <div class="order-1 md:order-2">
-                <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Receitinhas Express</span>
-                <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Receita Prática: <br>Sabor em minutos</h2>
+            <div class="order-3 md:order-2">
+                <div class="hidden md:block">
+                    <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Receitinhas Express</span>
+                    <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Receita Prática: <br>Sabor em minutos</h2>
+                </div>
                 <div class="text-lg text-gio-dark/80 leading-relaxed space-y-4">
                     <p>Cansada de gastar horas na cozinha ou recorrer aos ultraprocessados por falta de tempo?</p>
                     <p class="font-semibold text-gio-text">O Receitinhas Express é o atalho que toda mãe precisa.</p>
@@ -147,9 +171,15 @@
 
     <section class="py-24 bg-gio-light">
         <div class="container-custom grid md:grid-cols-2 gap-16 items-center">
-            <div>
+            <div class="md:hidden order-1">
                 <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Lancheira sem Stress</span>
                 <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Lancheira Escolar: <br>Saúde na mochila</h2>
+            </div>
+            <div class="order-3 md:order-1">
+                <div class="hidden md:block">
+                    <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Lancheira sem Stress</span>
+                    <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Lancheira Escolar: <br>Saúde na mochila</h2>
+                </div>
                 <div class="text-lg text-gio-dark/80 leading-relaxed space-y-4">
                     <p>Chega de sofrer toda noite (ou toda manhã).</p>
                     <p>Montar a lancheira não precisa ser um quebra-cabeça estressante.</p>
@@ -166,7 +196,7 @@
                     </a>
                 </div>
             </div>
-            <div>
+            <div class="order-2 md:order-2">
                 <img src="assets/img/capa-lancheira.jpg" alt="Lancheira Escolar" class="rounded-[40px] shadow-2xl w-full max-w-md mx-auto transform hover:-rotate-2 transition-all duration-500">
             </div>
         </div>
@@ -174,12 +204,18 @@
 
     <section class="py-24 bg-white border-b border-gray-50">
         <div class="container-custom grid md:grid-cols-2 gap-16 items-center">
+            <div class="md:hidden order-1">
+                <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Guia do Carrinho Perfeito</span>
+                <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Guia de Mercado: <br>Escolhas Inteligentes</h2>
+            </div>
             <div class="order-2 md:order-1">
                 <img src="assets/img/capa-supermercado.jpg" alt="Guia de Mercado" class="rounded-[40px] shadow-2xl w-full max-w-md mx-auto transform hover:rotate-2 transition-all duration-500">
             </div>
-            <div class="order-1 md:order-2">
-                <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Guia do Carrinho Perfeito</span>
-                <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Guia de Mercado: <br>Escolhas Inteligentes</h2>
+            <div class="order-3 md:order-2">
+                <div class="hidden md:block">
+                    <span class="text-gio-blue font-bold uppercase tracking-widest text-sm">Guia do Carrinho Perfeito</span>
+                    <h2 class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Guia de Mercado: <br>Escolhas Inteligentes</h2>
+                </div>
                 <div class="text-lg text-gio-dark/80 leading-relaxed space-y-4">
                     <p>Pare de ser enganada pelas embalagens "saudáveis".</p>
                     <p>Ir ao mercado não precisa ser um jogo de adivinhação.</p>
