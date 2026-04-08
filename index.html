@@ -37,25 +37,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"></noscript>
 
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gio: {
-                            blue: '#83B0C4',
-                            dark: '#5B7A8A',
-                            light: '#F5F9FB',
-                            text: '#1d1d1f'
-                        }
-                    },
-                    fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
-                }
-            }
-        }
-    </script>
+    <!-- CSS purgado local (substitui Tailwind CDN) -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 
     <style>
         html {
@@ -132,7 +115,7 @@
                     </a>
                 </div>
                 <div class="flex justify-center md:justify-end">
-                    <picture>
+                    <picture style="display:block;max-width:min(100%,28rem);width:100%;aspect-ratio:1/1">
                         <source srcset="assets/img/mockup-todos-removebg-preview.webp" type="image/webp">
                         <img
                             src="assets/img/mockup-todos-removebg-preview.png"
@@ -140,7 +123,7 @@
                             width="500"
                             height="500"
                             fetchpriority="high"
-                            class="w-full max-w-sm md:max-w-md drop-shadow-2xl"
+                            class="w-full h-auto drop-shadow-2xl"
                         >
                     </picture>
                 </div>

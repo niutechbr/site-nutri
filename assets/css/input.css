@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gio-blue: #83B0C4;
+  --color-gio-dark: #5B7A8A;
+  --color-gio-light: #F5F9FB;
+  --color-gio-text: #1d1d1f;
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
