@@ -7,8 +7,8 @@
     <meta name="description" content="Guias práticos de nutrição infantil criados por nutricionistas especializadas. Receitas rápidas, lancheira escolar saudável e como comprar bem no supermercado.">
     <link rel="icon" type="image/png" href="assets/img/favicon.png">
 
-    <!-- Preload LCP: imagem principal do hero -->
-    <link rel="preload" as="image" href="assets/img/mockup-todos-removebg-preview.png" fetchpriority="high">
+    <!-- Preload LCP: imagem principal do hero (WebP) -->
+    <link rel="preload" as="image" href="assets/img/mockup-todos-removebg-preview.webp" type="image/webp" fetchpriority="high">
 
     <!-- Meta Pixel Code -->
     <script>
@@ -28,8 +28,16 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
+    <!-- Preconnect para fontes (reduz latência) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts não-bloqueante -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"></noscript>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -94,7 +102,10 @@
     <nav class="sticky top-0 z-50 glass-nav py-4 transition-all duration-300" aria-label="Navegação principal">
         <div class="container-custom flex flex-col md:flex-row justify-between items-center gap-4">
             <a href="#" aria-label="Voltar ao topo — Nutrindo Pequenos">
-                <img src="assets/img/logo.png" alt="Logo Nutrindo Pequenos" width="1059" height="235" class="h-10 md:h-12 w-auto transition-transform hover:scale-105">
+                <picture>
+                    <source srcset="assets/img/logo.webp" type="image/webp">
+                    <img src="assets/img/logo.png" alt="Logo Nutrindo Pequenos" width="1059" height="235" class="h-10 md:h-12 w-auto transition-transform hover:scale-105">
+                </picture>
             </a>
 
             <div class="flex gap-6 md:gap-10 text-xs md:text-sm font-semibold text-gio-text/70 uppercase tracking-widest">
@@ -121,14 +132,17 @@
                     </a>
                 </div>
                 <div class="flex justify-center md:justify-end">
-                    <img
-                        src="assets/img/mockup-todos-removebg-preview.png"
-                        alt="E-books de nutrição infantil: Receitinhas Express, Lancheira sem Stress e Guia do Carrinho Perfeito"
-                        width="500"
-                        height="500"
-                        fetchpriority="high"
-                        class="w-full max-w-sm md:max-w-md drop-shadow-2xl"
-                    >
+                    <picture>
+                        <source srcset="assets/img/mockup-todos-removebg-preview.webp" type="image/webp">
+                        <img
+                            src="assets/img/mockup-todos-removebg-preview.png"
+                            alt="E-books de nutrição infantil: Receitinhas Express, Lancheira sem Stress e Guia do Carrinho Perfeito"
+                            width="500"
+                            height="500"
+                            fetchpriority="high"
+                            class="w-full max-w-sm md:max-w-md drop-shadow-2xl"
+                        >
+                    </picture>
                 </div>
             </div>
         </header>
@@ -161,23 +175,29 @@
                     <h2 id="titulo-receitinhas" class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Receita Prática: <br>Sabor em minutos</h2>
                 </div>
                 <div class="order-2 md:order-1 relative">
-                    <img
-                        src="assets/img/capa-receitas.jpg"
-                        alt="Capa do e-book Receitinhas Express"
-                        width="512"
-                        height="800"
-                        loading="lazy"
-                        class="rounded-[40px] shadow-2xl w-full max-w-md mx-auto transform hover:rotate-2 transition-all duration-500"
-                    >
-                    <img
-                        src="assets/img/mockup-receitinhas-removebg-preview.png"
-                        alt=""
-                        width="527"
-                        height="474"
-                        loading="lazy"
-                        class="hidden md:block absolute md:-bottom-8 md:-left-40 md:w-64 drop-shadow-xl"
-                        aria-hidden="true"
-                    >
+                    <picture>
+                        <source srcset="assets/img/capa-receitas.webp" type="image/webp">
+                        <img
+                            src="assets/img/capa-receitas.jpg"
+                            alt="Capa do e-book Receitinhas Express"
+                            width="512"
+                            height="800"
+                            loading="lazy"
+                            class="rounded-[40px] shadow-2xl w-full max-w-md mx-auto transform hover:rotate-2 transition-all duration-500"
+                        >
+                    </picture>
+                    <picture class="hidden md:block absolute md:-bottom-8 md:-left-40 md:w-64">
+                        <source srcset="assets/img/mockup-receitinhas-removebg-preview.webp" type="image/webp">
+                        <img
+                            src="assets/img/mockup-receitinhas-removebg-preview.png"
+                            alt=""
+                            width="527"
+                            height="474"
+                            loading="lazy"
+                            class="drop-shadow-xl"
+                            aria-hidden="true"
+                        >
+                    </picture>
                 </div>
                 <div class="order-3 md:order-2">
                     <div class="hidden md:block">
@@ -231,23 +251,29 @@
                     </div>
                 </div>
                 <div class="order-2 md:order-2 relative">
-                    <img
-                        src="assets/img/capa-lancheira.jpg"
-                        alt="Capa do e-book Lancheira sem Stress"
-                        width="512"
-                        height="800"
-                        loading="lazy"
-                        class="rounded-[40px] shadow-2xl w-full max-w-md mx-auto transform hover:-rotate-2 transition-all duration-500"
-                    >
-                    <img
-                        src="assets/img/mockup-lancheira-removebg-preview.png"
-                        alt=""
-                        width="400"
-                        height="625"
-                        loading="lazy"
-                        class="hidden md:block absolute md:-bottom-36 md:-right-40 md:w-64 drop-shadow-xl"
-                        aria-hidden="true"
-                    >
+                    <picture>
+                        <source srcset="assets/img/capa-lancheira.webp" type="image/webp">
+                        <img
+                            src="assets/img/capa-lancheira.jpg"
+                            alt="Capa do e-book Lancheira sem Stress"
+                            width="512"
+                            height="800"
+                            loading="lazy"
+                            class="rounded-[40px] shadow-2xl w-full max-w-md mx-auto transform hover:-rotate-2 transition-all duration-500"
+                        >
+                    </picture>
+                    <picture class="hidden md:block absolute md:-bottom-36 md:-right-40 md:w-64">
+                        <source srcset="assets/img/mockup-lancheira-removebg-preview.webp" type="image/webp">
+                        <img
+                            src="assets/img/mockup-lancheira-removebg-preview.png"
+                            alt=""
+                            width="400"
+                            height="625"
+                            loading="lazy"
+                            class="drop-shadow-xl"
+                            aria-hidden="true"
+                        >
+                    </picture>
                 </div>
             </div>
         </section>
@@ -259,23 +285,29 @@
                     <h2 id="titulo-carrinho" class="text-4xl font-bold mt-4 mb-6 text-gio-text leading-tight">Guia de Mercado: <br>Escolhas Inteligentes</h2>
                 </div>
                 <div class="order-2 md:order-1 relative">
-                    <img
-                        src="assets/img/capa-supermercado.jpg"
-                        alt="Capa do e-book Guia do Carrinho Perfeito"
-                        width="512"
-                        height="800"
-                        loading="lazy"
-                        class="rounded-[40px] shadow-2xl w-full max-w-md mx-auto transform hover:rotate-2 transition-all duration-500"
-                    >
-                    <img
-                        src="assets/img/mockup-carrinho.png"
-                        alt=""
-                        width="400"
-                        height="625"
-                        loading="lazy"
-                        class="hidden md:block absolute md:-bottom-36 md:-left-40 md:w-64 drop-shadow-xl"
-                        aria-hidden="true"
-                    >
+                    <picture>
+                        <source srcset="assets/img/capa-supermercado.webp" type="image/webp">
+                        <img
+                            src="assets/img/capa-supermercado.jpg"
+                            alt="Capa do e-book Guia do Carrinho Perfeito"
+                            width="512"
+                            height="800"
+                            loading="lazy"
+                            class="rounded-[40px] shadow-2xl w-full max-w-md mx-auto transform hover:rotate-2 transition-all duration-500"
+                        >
+                    </picture>
+                    <picture class="hidden md:block absolute md:-bottom-36 md:-left-40 md:w-64">
+                        <source srcset="assets/img/mockup-carrinho.webp" type="image/webp">
+                        <img
+                            src="assets/img/mockup-carrinho.png"
+                            alt=""
+                            width="400"
+                            height="625"
+                            loading="lazy"
+                            class="drop-shadow-xl"
+                            aria-hidden="true"
+                        >
+                    </picture>
                 </div>
                 <div class="order-3 md:order-2">
                     <div class="hidden md:block">
@@ -327,14 +359,17 @@
 
                 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20 mb-32">
                     <div class="relative animate-fade-in">
-                        <img
-                            src="assets/img/nutri1.png"
-                            alt="Giovanna Milkem, nutricionista materno-infantil"
-                            width="2773"
-                            height="3026"
-                            loading="lazy"
-                            class="profile-circle foto-giovanna transition-transform hover:scale-105 duration-500"
-                        >
+                        <picture>
+                            <source srcset="assets/img/nutri1.webp" type="image/webp">
+                            <img
+                                src="assets/img/nutri1.png"
+                                alt="Giovanna Milkem, nutricionista materno-infantil"
+                                width="560"
+                                height="560"
+                                loading="lazy"
+                                class="profile-circle foto-giovanna transition-transform hover:scale-105 duration-500"
+                            >
+                        </picture>
                         <div class="absolute bottom-4 -right-4 bg-gio-blue text-white p-4 rounded-2xl shadow-xl text-center min-w-[120px]">
                             <p class="text-xs font-bold uppercase tracking-wider">Nutricionista</p>
                             <p class="text-sm">Materno-infantil</p>
@@ -354,14 +389,17 @@
 
                 <div class="flex flex-col md:flex-row-reverse items-center gap-12 md:gap-20">
                     <div class="relative animate-fade-in">
-                        <img
-                            src="assets/img/nutri2.png"
-                            alt="Letícia Machado, nutricionista materno-infantil"
-                            width="1080"
-                            height="1350"
-                            loading="lazy"
-                            class="profile-circle transition-transform hover:scale-105 duration-500"
-                        >
+                        <picture>
+                            <source srcset="assets/img/nutri2.webp" type="image/webp">
+                            <img
+                                src="assets/img/nutri2.png"
+                                alt="Letícia Machado, nutricionista materno-infantil"
+                                width="560"
+                                height="560"
+                                loading="lazy"
+                                class="profile-circle transition-transform hover:scale-105 duration-500"
+                            >
+                        </picture>
                         <div class="absolute bottom-4 -left-4 bg-gio-dark text-white p-4 rounded-2xl shadow-xl text-center min-w-[120px]">
                             <p class="text-xs font-bold uppercase tracking-wider">Nutricionista</p>
                             <p class="text-sm">Materno-infantil</p>
@@ -384,7 +422,10 @@
     </main>
 
     <footer class="bg-white py-16 text-center border-t border-gray-50">
-        <img src="assets/img/logo.png" alt="Logo Nutrindo Pequenos" width="1059" height="235" loading="lazy" class="h-16 mx-auto mb-8 opacity-40">
+        <picture>
+            <source srcset="assets/img/logo.webp" type="image/webp">
+            <img src="assets/img/logo.png" alt="Logo Nutrindo Pequenos" width="1059" height="235" loading="lazy" class="h-16 mx-auto mb-8 opacity-40">
+        </picture>
         <p class="text-sm text-gray-400 font-bold uppercase tracking-widest">© 2026 Giovanna Milkem &amp; Letícia Machado — Nutricionistas</p>
         <div class="inline-flex items-center gap-2 mt-6 border border-gio-blue/30 rounded-full px-5 py-2 text-gio-dark/50 text-xs font-semibold uppercase tracking-widest">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-gio-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
